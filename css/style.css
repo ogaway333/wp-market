@@ -1,0 +1,915 @@
+*{
+    outline: none;
+}
+
+body{
+    font-family: "Helvetica Neue",Arial,"Hiragino Kaku Gothic ProN","Hiragino Sans",Meiryo,sans-serif;
+    height: 100%;
+}
+
+h1,h2{
+    font-family: 'Times New Roman', Times, serif;
+    color: #555555;
+}
+
+.container-width{
+    margin: 20px auto;
+    width: 60%;
+}
+
+
+/*========================================
+  背景
+========================================*/
+.top-image{
+    position: relative;
+    height: 500px;
+    background-image: url("../img/main-picture.jpg");     /* 背景画像指定 */
+    background-repeat:  no-repeat;              /* 背景の繰り返し設定 */
+    background-size: cover;
+    background-position: center;
+}
+
+.opacity-cover{
+    height: 100%;
+    background-color: black;
+    opacity: 0.3;
+}
+
+.top-text{
+    position: absolute;
+    color: #ffffff;
+    font-family: 'Times New Roman', Times, serif;
+    top: 50%; /*親要素を起点に上から50%*/
+    left: 50%;  /*親要素を起点に左から50%*/
+    transform: translateY(-50%) translateX(-50%); /*要素の大きさの半分ずつを戻す*/
+    -webkit-transform: translateY(-50%) translateX(-50%);
+    font-size: 32px;
+    color: #ffffff;
+
+}
+
+.background{
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+}
+
+
+
+/*========================================
+  フォーム
+========================================*/
+.area-msg{
+    color: red;
+    font-size: 12px;
+    margin: 0 auto;
+    width: 280px;
+}
+.login-form{
+    margin: 0 auto;
+    width: 50%;
+}
+
+form h2{
+    padding: 30px 0;
+    text-align: center;
+}
+
+.passRemind-link{
+    text-decoration: none;
+    font-size: 12px;
+    color: #3366cc;
+}
+
+.login-form input{
+    display: block;
+    width: 100%;
+}
+
+.login-form  input[type="text"], .login-form input[type="password"]{
+    padding: 5px;
+    border: 1px solid #707070;
+    width: 100%;
+    border-radius: 5px;
+}
+
+input[type=checkbox] {
+    display: none;
+}
+
+.login-form input:not(:last-child){
+    margin-bottom: 20px;
+}
+
+.checkbox01 {
+    position: relative;
+    box-sizing: border-box;
+    cursor: pointer;
+    display:flex;
+    align-items:center;
+    width: auto;
+    font-size: 12px;
+    color: #555555;
+}
+
+.checkbox01::before {
+    background: #fff;
+    border: 1px solid #231815;
+    content: '';
+    display: inline-block;
+    margin-right: 10px;
+    height: 15px;
+    width: 15px;
+}
+
+
+#check_login_save:checked + .checkbox-parts::after{
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 5px;
+  width: 7px;
+  height: 15px;
+  transform: rotate(40deg);
+  border-bottom: 3px solid #d01137;
+  border-right: 3px solid #d01137;
+
+}
+
+
+
+
+.login-form  input[type="submit"]{
+    margin:  40px auto;
+    color: #ffffff;
+    background-color: #4DA6FF;
+    color: #ffffff;
+    font-weight: bold;
+    font-size: 20px;
+    width: 145px;
+    height: 50px;
+    border-radius: 30px;
+}
+
+
+
+.signup-form{
+    width: 50%;
+    margin: 0 auto;
+}
+
+.signup-form input{
+    display: block;
+}
+
+.signup-form input:not(:last-child){
+    margin-bottom: 20px;
+}
+
+.signup-form  input[type="text"], .signup-form input[type="password"]{
+    padding: 5px;
+    width: 100%;
+    border: 1px solid #707070;
+    border-radius: 5px;
+}
+
+.signup-form  input[type="submit"]{
+    margin:  40px auto;
+    color: #ffffff;
+    background-color: #4DA6FF;
+    color: #ffffff;
+    font-weight: bold;
+    font-size: 20px;
+    width: 145px;
+    height: 50px;
+    border-radius: 30px;
+}
+
+.create-reviewform input[type="submit"]{
+    margin:  20px auto;
+    color: #ffffff;
+    background-color: #4DA6FF;
+    color: #ffffff;
+    font-weight: bold;
+    font-size: 16px;
+    width: 100px;
+    height: 40px;
+    border-radius: 30px;
+}
+
+.review-textarea{
+    margin: 10px 0;
+    border: 1px solid #a6a6a6;
+    width: 100%;
+    max-height: 300px;
+    border-radius: 5px;
+}
+
+.label-require{
+    font-size: 12px;
+    color: #dd0000;
+    margin-left: 5px;
+}
+
+.regist-form{
+    margin-top: 30px;
+}
+
+
+.regist-form label input{
+    width: 100%;
+    height: 30px;
+    border: 1px solid #a6a6a6;
+    margin-bottom: 30px;
+}
+
+.regist-textarea{
+    border: 1px solid #a6a6a6;
+    width: 100%;
+    max-height: 300px;
+    border-radius: 5px;
+    margin-bottom: 30px;
+}
+
+.imgDrop-container{
+    float: left;
+    padding-bottom: 30px;
+}
+.imgDrop-container:not(:last-child){
+    margin-right: 15px;
+}
+
+.area-drop{
+    position: relative;
+    cursor: pointer;
+    display: block;
+    width: 150px;
+    height: 150px;
+    background-color: #cccccc;
+}
+
+.area-drop .input-file{
+    position: absolute;
+    top:0;
+    left:0;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    opacity: 0.0;
+    z-index: 2;
+}
+
+.prev-img{
+  width:100%;
+  height: 100%;
+  position:absolute;
+  top:0;
+  left:0;
+  z-index: 1;
+}
+
+.prev-img{
+  width:100%;
+  position:absolute;
+  top:0;
+  left:0;
+}
+
+.file-upload-button .input-file{
+    opacity: 0.0;
+    margin: 0;
+}
+
+.regist-form input[type="submit"]{
+    display: block;
+    margin: 0 auto 30px auto;
+    color: #ffffff;
+    background-color: #4DA6FF;
+    color: #ffffff;
+    font-weight: bold;
+    font-size: 20px;
+    width: 145px;
+    height: 50px;
+    border-radius: 30px;
+}
+
+.remind-text{
+    padding: 15px 0;
+}
+
+.passRemind-form{
+    padding: 20px 0;
+}
+
+.passRemind-form label input[name='email'],
+.passRemind-form label input[name='token']{
+    padding: 5px;
+    width: 100%;
+    margin: 10px auto;
+    border: 1px solid #707070;
+    height: 30px;
+    border-radius: 5px;
+}
+
+.passRemind-form input[type="submit"]{
+    display: block;
+    margin: 30px auto;
+    color: #ffffff;
+    background-color: #4DA6FF;
+    color: #ffffff;
+    font-weight: bold;
+    width: 100px;
+    height: 40px;
+    border-radius: 30px;
+}
+
+
+
+/*========================================
+slick
+========================================*/
+.slider01{
+    width: 100%;
+}
+.slider01 img{
+    width: 100%;
+    height: 30vw;
+}
+
+
+/*========================================
+ヘッダー
+========================================*/
+
+header{
+    padding: 0 50px;
+    width: 100%;
+    height: 80px;
+    overflow: hidden;
+    top: 0;
+    left: 0;
+    background-color: #ffffff;
+}
+
+.header-logo{
+    position: relative;
+    height: 100%;
+    float: left;
+}
+
+.header-logo img{
+    position: absolute;
+    top: 50%;
+    width: 80px;
+    height: 50px;
+    -webkit-transform : translateY(-50%);
+    transform : translateY(-50%);
+}
+
+nav{
+    height: 100%;
+    float: right;
+}
+
+.header-search-container{
+    float: left;
+    height: 100%;
+    width: 200px;
+}
+
+.header-search-container form{
+    position: relative;
+    height: 100%;
+}
+
+.header-search-container form input{
+    padding: 15px;
+    position: absolute;
+    top: 50%;
+    -webkit-transform : translateY(-50%);
+    transform : translateY(-50%);
+    height: 30px;
+    width: 100%;
+    background-color: #f2f1f0;
+}
+
+.header-subnav{
+    height: 100%;
+    margin-left: 30px;
+    list-style: none;
+    float: left;
+}
+
+.header-subnav li{
+    float: left;
+    height: 100%;
+    display: flex;
+	align-items: center;
+}
+
+.header-subnav li:not(:last-child){
+    margin-right: 10px;
+}
+
+.header-subnav li a{
+    color: #666666;
+    text-decoration: none;
+}
+
+.pickup-tag{
+    height: 150px;
+    text-align: center;
+}
+
+.pickup-tag h2{
+    margin: 30px 0;
+}
+
+.taglist{
+    display: inline-block;
+    list-style: none;
+}
+
+.taglist li{
+    float: left;
+    background-color: #555555;
+    width: 150px;
+    height: 30px;
+    border-radius: 15px;
+}
+
+.taglist li:not(:last-child){
+    margin-right: 10px;
+}
+
+.taglist li a{
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+    text-decoration: none;
+    font-size: 12px;
+    color: #ffffff;
+}
+
+.content-container{
+    background-color: #f7f7f7;
+    overflow: hidden;
+    text-align: center;
+}
+
+.content-container h2{
+    margin: 30px 0 15px 0;
+    text-align: center;
+}
+
+.content-cover{
+    display: flex;
+    justify-content:center;
+    flex-wrap: wrap;
+}
+
+.content-cover .content-box{
+    list-style: none;
+    box-sizing: content-box;
+    padding: 15px;
+    width: 250px;
+    height: 250px;
+}
+
+.content{
+    display: block;
+    background-color: #ffffff;
+    height: 100%;
+    text-decoration: none;
+    overflow: hidden;
+}
+
+.eyecatching-image{
+    height: 150px;
+}
+
+.eyecatching-image img{
+    width:100%;
+    height: 100%;
+}
+
+.eyecatching-name{
+    font-weight: bold;
+    padding: 20px 0;
+    color: #555555;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.more-button{
+    margin: 15px 0;
+    font-size: 20px;
+    width: 150px;
+    height: 50px;
+    border-radius: 30px;
+    background-color: #555555;
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.more-button:hover{
+    opacity: 0.8;
+}
+
+footer{
+    width: 100%;
+    padding: 15px;
+    background-color: #555555;
+}
+
+
+/*========================================
+商品ページ
+========================================*/
+.product_title{
+
+    margin: 30px 0;
+    text-align: center;
+}
+.product_container{
+    margin:  0 auto;
+    width: 60%;
+}
+
+
+
+.user_image{
+    width: 70px;
+    height: 70px;
+}
+
+.user_image img{
+    border-radius: 90px;
+    width: 100%;
+    height: 100%;
+}
+
+
+.selluser_container{
+    overflow: hidden;
+    display: flex;
+	align-items: center;
+}
+
+.selluser_container .user_image{
+
+}
+
+.selluser_container .username{
+    padding-left: 20px;
+    color: #555555;
+    font-weight: bold;
+}
+
+.link_container{
+    overflow: hidden;
+    padding: 20px 0;
+}
+
+.download-button{
+    float: left;
+    width: 200px;
+    height: 50px;
+    color: #ffffff;
+    font-weight: bold;
+    background-color: #EA352D;
+    margin-right: 30px;
+
+}
+
+.demo-button{
+    float: left;
+    width: 150px;
+    height: 50px;
+    color: #ffffff;
+    font-weight: bold;
+    background-color: #555555;
+
+}
+
+.product-tag{
+    list-style: none;
+    overflow: hidden;
+    display: flex;
+}
+
+.product-tag li{
+}
+
+.product-tag li:not(:last-child){
+    margin-right: 10px;
+}
+
+.product-tag li a{
+    display: inline-block;
+    line-height: 100%;
+    font-weight: bold;
+    color: #555555;
+    text-decoration: none;
+}
+
+.product_h2{
+    margin: 20px 0;
+}
+
+.exp_text{
+    color: #555555;
+    text-align: left;
+}
+
+.average-evaluation p{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 80px;
+    font-weight: bold;
+    color: #555555;
+}
+
+.average-evaluation{
+    display: inline-block;
+    text-align: center;
+}
+
+.average-star{
+    padding: 15px 0;
+    overflow: hidden;
+    list-style: none;
+}
+
+.average-star li{
+    color: #BAE11A;
+    float: left;
+}
+
+.average-star li:not(:last-child){
+    margin-right: 5px;
+}
+
+.review-button{
+    background-color: #4DA6FF;
+    color: #ffffff;
+    width: 180px;
+    height: 40px;
+    border-radius: 30px;
+    margin: 30px 0;
+}
+
+.review-box{
+    padding: 30px 0;
+}
+
+.userinfo-container{
+    overflow: hidden;
+    display: flex;
+	align-items: center;
+}
+
+.userinfo-container .user_image{
+
+}
+
+.userinfo-container .username{
+    padding-left: 20px;
+    color: #555555;
+    font-weight: bold;
+}
+
+.review-star{
+    padding: 10px 0;
+    overflow: hidden;
+    list-style: none;
+}
+
+.review-star li{
+    color: #BAE11A;
+    float: left;
+}
+
+.review-star li:not(:last-child){
+    margin-right: 5px;
+}
+
+.review-date{
+    padding: 15px 0;
+    color: #555555;
+    font-weight: bold;
+}
+
+.review-text{
+    text-align: left;
+    color: #555555;
+}
+
+/*========================================
+レビュー投稿ページ
+========================================*/
+.create-review-container{
+    height: 700px;
+}
+
+.create-review-container h2{
+    padding: 10px 0;
+}
+
+
+/*========================================
+テーマ投稿ページ
+========================================*/
+.regist-container h1{
+    padding-top: 30px;
+    text-align: center;
+}
+
+.file-upload-button{
+    position: relative;
+    color: #555555;
+    font-size: 12px;
+    display: block;
+    background-color: #d7d9e0;
+    height: 30px;
+    width: 150px;
+    margin: 30px 0;
+}
+
+.upload-button-text{
+    color: #555555;
+    font-weight: bold;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateY(-50%) translateX(-50%);
+    -webkit-transform: translateY(-50%) translateX(-50%);
+
+}
+
+.js-upload-filename{
+    color: #555555;
+}
+
+/*========================================
+マイページ
+========================================*/
+
+.mypage-container{
+    padding: 30px 0;
+}
+
+.myuser_image{
+    width: 100px;
+    height: 100px;
+}
+
+.myuser_image img{
+    border-radius: 90px;
+    height: 100%;
+    width: 100%;
+}
+
+.myusername{
+    padding-left: 10px;
+    color: #555555;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.self-introduction{
+    color: #555555;
+    padding: 30px 0;
+}
+
+.registproduct-link{
+    padding-left: 20px;
+    text-decoration: none;
+    font-size: 12px;
+    color: #3366cc;
+
+}
+
+.registprofile-link{
+    display: inline-block;
+    margin-top: 10px;
+    text-decoration: none;
+    font-size: 12px;
+    color: #3366cc;
+
+}
+
+.mycontent-cover{
+    list-style: none;
+}
+
+.mycontent-box{
+    height: 200px;
+    margin-top: 30px;
+    box-shadow: 0 0 3px gray;
+}
+
+.mycontent{
+    height: 100%;
+    text-decoration: none;
+    display: block;
+}
+
+.float-container{
+    height: 100%;
+    overflow: hidden;
+}
+
+.myeyecatching-image{
+    float: left;
+    height: 100%;
+}
+
+.myeyecatching-image img{
+    width: 250px;
+    height: 100%;
+}
+
+.myeyecatching-name{
+    margin-left: 15px;
+    padding: 15px 0;
+    font-size: 20px;
+    font-weight: bold;
+    float: left;
+    color: #555555;
+}
+
+.score-data{
+    height: 20%;
+    display: flex;
+    align-items: center;
+
+}
+
+.score-count {
+    padding: 0 15px;
+    color: #555555;
+}
+
+.dl-count{
+    color: #555555;
+}
+
+/*========================================
+プロフィール編集画面
+=======================================*/
+.myicon{
+    width: 150px;
+    height: 150px;
+    background-color: #cccccc;
+    margin-bottom: 30px;
+}
+
+/*========================================
+  ページネーション
+========================================*/
+.pagination{
+    padding: 30px;
+}
+
+.pagination-list {
+    display: inline-block;
+    overflow: hidden;
+    list-style: none;
+    margin:  0 auto;
+}
+
+.pagination-list .list-item {
+  float: left;
+  margin-right: 15px;
+}
+
+.pagination .list-item:last-child {
+  margin-right: 0;
+}
+
+.pagination .list-item a {
+  display: block;
+  padding: 15px;
+  border-radius: 30px;
+  background: #eeeeee;
+  color: #555555;
+  text-decoration: none;
+}
+
+.pagination .list-item.active a {
+  background: #555555;
+  color: white;
+}
+
+.pagination .list-item a:hover {
+  background: #555555;
+  color: white;
+}
